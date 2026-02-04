@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #fce4ec; /* Color de fondo rosita claro */
+    background-color: #fce4ec; 
     font-family: 'Arial', sans-serif;
     margin: 0;
 }
@@ -21,7 +21,7 @@ h1 {
 }
 
 .foto {
-    width: 200px; /* Tamaño de la imagen */
+    width: 200px; 
     border-radius: 15px;
     margin-bottom: 20px;
 }
@@ -41,12 +41,12 @@ button {
 }
 
 #siBtn {
-    background-color: #4caf50; /* Verde */
+    background-color: #4caf50; 
     color: white;
 }
 
 #noBtn {
-    background-color: #f44336; /* Rojo */
+    background-color: #f44336; 
     color: white;
-    position: absolute; /* Importante para que se mueva */
+    position: absolute; 
 }.
