@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Me perdonas?</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* AQUÍ ESTÁ EL DISEÑO (CSS) */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden; /* Evita barras de desplazamiento */
+        }
+
+        .contenedor {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative; /* Para que todo se ordene bien */
+            z-index: 10;
+        }
+
+        h1 {
+            color: #d81b60;
+        }
+
+        .foto {
+            width: 200px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .botones {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #siBtn {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+            position: absolute; /* ¡CLAVE! Esto permite que se mueva libremente */
+        }
+    </style>
 </head>
 <body>
+
     <div class="contenedor">
         <h1>¿Me perdonas? 🥺</h1>
-        <img src="https://i.pinimg.com/originals/5d/ed/89/5ded89cc940f476bd1c883dac5445aab.gif" alt="GIF triste" class="foto">
+        <img src="tu-gif-o-imagen.gif" alt="GIF triste" class="foto">
         <p>Sé que me equivoqué... ¿podemos arreglarlo?</p>
         
         <div class="botones">
@@ -18,6 +76,28 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // AQUÍ ESTÁ LA MAGIA (JAVASCRIPT)
+        const noBtn = document.getElementById('noBtn');
+        const siBtn = document.getElementById('siBtn');
+
+        // Lógica para el botón "No"
+        noBtn.addEventListener('mouseover', function () {
+            // Generar posición aleatoria
+            const randomX = parseInt(Math.random() * 100);
+            const randomY = parseInt(Math.random() * 100);
+            
+            // Aplicar la nueva posición
+            noBtn.style.setProperty('top', randomY + '%');
+            noBtn.style.setProperty('left', randomX + '%');
+            noBtn.style.setProperty('transform', `translate(-${randomX}%, -${randomY}%)`);
+        });
+
+        // Lógica para el botón "Sí"
+        siBtn.addEventListener('click', function () {
+            alert('¡Sabía que me perdonarías! ❤️ Gracias.');
+        });
+    </script>
+
 </body>
 </html>
